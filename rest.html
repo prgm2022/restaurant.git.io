@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Olive & Ember | Restaurant</title>
+
+    <link rel="stylesheet" href="rest.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="container">
+
+            <a href="#home" class="logo">
+                Olive <span>&</span> Ember
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#reservation" class="btn">Book a Table</a>
+
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+
+        <div class="container hero-content">
+
+            <span>WELCOME TO OLIVE & EMBER</span>
+
+            <h1>
+                Where Every Meal
+                Becomes a Memory
+            </h1>
+
+            <p>
+                Discover fresh ingredients, delicious flavors,
+                and unforgettable moments.
+            </p>
+
+            <a href="#menu" class="btn">Explore Our Menu</a>
+
+        </div>
+
+    </section>
+
+    <section class="about container" id="about">
+
+        <div class="about-image">
+            <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85"
+                alt="Restaurant interior">
+        </div>
+
+        <div class="about-text">
+
+            <span>OUR STORY</span>
+
+            <h2>A Taste of Passion</h2>
+
+            <p>
+                At Olive & Ember, we believe that great food
+                brings people together.
+
+                Our kitchen combines fresh ingredients,
+                thoughtful recipes and a passion for hospitality.
+            </p>
+
+            <a href="#reservation" class="btn">Reserve Your Table</a>
+
+        </div>
+
+    </section>
+
+    <section class="menu" id="menu">
+
+        <div class="container">
+
+            <div class="section-title">
+                <span>DISCOVER OUR MENU</span>
+                <h2>Our Signature Dishes</h2>
+            </div>
+
+            <div class="filters">
+
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="starter">Starters</button>
+                <button class="filter-btn" data-filter="main">Main Courses</button>
+                <button class="filter-btn" data-filter="dessert">Desserts</button>
+
+            </div>
+
+            <div class="menu-grid">
+
+                <div class="menu-card" data-category="starter">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Garden Salad">
+
+                    <div class="menu-info">
+                        <h3>Garden Salad</h3>
+                        <p>Fresh greens, tomatoes and olive oil.</p>
+                        <strong>12 DT</strong>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="main">
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80" alt="Rustic Pasta">
+
+                    <div class="menu-info">
+                        <h3>Rustic Pasta</h3>
+                        <p>Homemade pasta with tomato and basil sauce.</p>
+                        <strong>24 DT</strong>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="main">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Grilled Special">
+
+                    <div class="menu-info">
+                        <h3>Grilled Special</h3>
+                        <p>Grilled meat with seasonal vegetables.</p>
+                        <strong>38 DT</strong>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="starter">
+                    <img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=800&q=80" alt="Bruschetta">
+
+                    <div class="menu-info">
+                        <h3>Tomato Bruschetta</h3>
+                        <p>Toasted bread with tomatoes and herbs.</p>
+                        <strong>14 DT</strong>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="dessert">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Chocolate Cake">
+
+                    <div class="menu-info">
+                        <h3>Chocolate Cake</h3>
+                        <p>Rich chocolate cake with chocolate cream.</p>
+                        <strong>10 DT</strong>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="dessert">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80" alt="Ice Cream">
+
+                    <div class="menu-info">
+                        <h3>Vanilla Ice Cream</h3>
+                        <p>Creamy vanilla ice cream with fresh toppings.</p>
+                        <strong>8 DT</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="reservation" id="reservation">
+
+        <div class="container">
+
+            <div class="section-title">
+                <span>MAKE A RESERVATION</span>
+                <h2>Book Your Table</h2>
+            </div>
+
+            <form id="bookingForm">
+
+                <input type="text" placeholder="Your Name" required>
+
+                <input type="email" placeholder="Your Email" required>
+
+                <input type="date" id="bookingDate" required>
+
+                <select required>
+                    <option value="">Number of Guests</option>
+                    <option>1 Guest</option>
+                    <option>2 Guests</option>
+                    <option>3 Guests</option>
+                    <option>4 Guests</option>
+                    <option>5 Guests</option>
+                    <option>6 Guests</option>
+                </select>
+
+                <textarea placeholder="Special Requests"></textarea>
+
+                <button type="submit" class="btn">
+                    Request Reservation
+                </button>
+
+            </form>
+
+            <p id="bookingMessage"></p>
+
+        </div>
+
+    </section>
+
+    <section class="contact container" id="contact">
+
+        <div class="section-title">
+            <span>GET IN TOUCH</span>
+            <h2>Visit Our Restaurant</h2>
+        </div>
+
+        <div class="contact-grid">
+
+            <div>
+                <h3>Our Location</h3>
+                <p>123 Olive Street, Sousse, Tunisia</p>
+            </div>
+
+            <div>
+                <h3>Opening Hours</h3>
+                <p>Monday – Sunday<br>12:00 PM – 11:00 PM</p>
+            </div>
+
+            <div>
+                <h3>Contact Us</h3>
+                <p>+216 00 000 000<br>hello@example.com</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <h2>Olive & Ember</h2>
+        <p>© 2026 Olive & Ember. Portfolio demonstration.</p>
+    </footer>
+
+    <script>
+
+        // Menu filtering
+
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const menuCards = document.querySelectorAll(".menu-card");
+
+        filterButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const category = button.dataset.filter;
+
+                filterButtons.forEach(btn =>
+                    btn.classList.remove("active")
+                );
+
+                button.classList.add("active");
+
+                menuCards.forEach(card => {
+
+                    if (
+                        category === "all" ||
+                        card.dataset.category === category
+                    ) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+
+                });
+
+            });
+
+        });
+
+
+        // Reservation demonstration
+
+        const bookingDate = document.getElementById("bookingDate");
+
+        const today = new Date();
+
+        const localDate = new Date(
+            today.getTime() - today.getTimezoneOffset() * 60000
+        ).toISOString().split("T")[0];
+
+        bookingDate.min = localDate;
+
+
+        document.getElementById("bookingForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                document.getElementById("bookingMessage").textContent =
+                    "Thank you! This is a demo reservation form.";
+
+                this.reset();
+
+            });
+
+    </script>
+
+</body>
+</html>
